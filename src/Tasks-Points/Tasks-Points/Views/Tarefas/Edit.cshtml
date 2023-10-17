@@ -1,0 +1,55 @@
+﻿@model Tasks_Points.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar tarefa</h1>
+<p>Altere os dados que deseja e aperte em "Salvar".</p>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prioridade" class="control-label"></label>
+                <select asp-for="Prioridade" class="form-control" asp-items="Html.GetEnumSelectList<GrauPrioridade>()"></select>
+                <span asp-validation-for="Prioridade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Responsavel" class="control-label"></label>
+                <input asp-for="Responsavel" class="form-control" />
+                <span asp-validation-for="Responsavel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrazoLimite" class="control-label"></label>
+                <input asp-for="PrazoLimite" class="form-control" />
+                <span asp-validation-for="PrazoLimite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Coins" class="control-label"></label>
+                <input asp-for="Coins" class="form-control" />
+                <span asp-validation-for="Coins" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<StatusTarefa>()"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input style="margin-top:15px; width:100px;" type="submit" value="Salvar" class="btn btn-primary" /> |
+                <a style="margin-top:15px; width:100px" class="btn btn-dark" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

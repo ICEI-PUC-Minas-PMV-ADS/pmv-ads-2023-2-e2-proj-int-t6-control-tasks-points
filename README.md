@@ -1,33 +1,27 @@
-# TÍTULO DO PROJETO
+# TASKS POINTS
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`2º período`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+A nossa aplicação Tasks Points tem como intuito auxiliar empregadores a empregados a se organizarem melhor no cumprimento de suas tarefas diárias. Buscamos oferecer uma ferramenta que aumente a produtividade, poupe tempo, evite retrabalho constante e que também recompense colaboradores por sua dedicação e foco.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Bianca Nicoly Dias Matos
+* Izabela Apolinário do Nascimento
+* Samara Karoline de Almeida Costa
+* Thiago Almeida Amorim
 
 ## Orientador
 
-* Nome completo do professor 1
+* Bernardo Jeunon de Alencar
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
-
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
-
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
-
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+Assim que a primeira versão do sistema estiver disponível, iremos disponibilizar as instruções de utilização. Descreveremos como instalar eventuais dependências e como executar a aplicação.
 
 # Documentação
 
@@ -37,20 +31,22 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 <li><a href="docs/03-Metodologia.md"> Metodologia</a></li>
 <li><a href="docs/04-Projeto de Interface.md"> Projeto de Interface</a></li>
 <li><a href="docs/05-Arquitetura da Solução.md"> Arquitetura da Solução</a></li>
-<li><a href="docs/06-Template Padrão da Aplicação.md"> Template Padrão da Aplicação</a></li>
+<li><a href="docs/06-Template padrão do Site.md"> Template padrão do Site</a></li>
 <li><a href="docs/07-Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
 <li><a href="docs/08-Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
 <li><a href="docs/09-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
-<li><a href="docs/10-Plano de Testes de Usabilidade.md"> Plano de Testes de Usabilidade</a></li>
-<li><a href="docs/11-Registro de Testes de Usabilidade.md"> Registro de Testes de Usabilidade</a></li>
-<li><a href="docs/12-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
-<li><a href="docs/13-Referências.md"> Referências</a></li>
+<li><a href="docs/10-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
+<li><a href="docs/11-Referências.md"> Referências</a></li>
 </ol>
 
-# Código
+# Hospedagem
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
 
-# Apresentação
+# Armazenamento do Código-Fonte
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+* <a href="src/README.md">Código Fonte</a>
+
+# Armazenamento da Apresentação
+
+* <a href="presentation/README.md">Apresentação da solução</a>

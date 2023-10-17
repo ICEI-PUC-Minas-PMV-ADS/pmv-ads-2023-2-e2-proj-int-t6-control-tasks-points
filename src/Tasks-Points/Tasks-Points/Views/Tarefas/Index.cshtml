@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Tasks_Points.Models.Tarefa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="p-3 mb-2 bg-dark text-white">Lista de Tarefas</h1>
+
+<p>
+    <a class="btn btn-outline-dark" asp-action="Create">Criar nova</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prioridade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Responsavel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrazoLimite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Coins)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prioridade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Responsavel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrazoLimite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Coins)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a class="btn btn-outline-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn btn-outline-info btn-sm" asp-action="Details" asp-route-id="@item.Id">Visualizar</a> |
+                <a class="btn btn-outline-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
