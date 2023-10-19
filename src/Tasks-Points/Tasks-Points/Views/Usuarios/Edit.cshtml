@@ -4,9 +4,8 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Usuario</h4>
+<h1>Atualizar dados</h1>
+<p>Altere os dados que deseja e aperte em "Salvar".</p>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -34,14 +33,11 @@
                 <span asp-validation-for="Permission" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input style="margin-top:15px; width:100px;" type="submit" value="Salvar" class="btn btn-primary" /> |
+                <a style="margin-top:15px; width:100px" class="btn btn-dark" asp-action="Index">Voltar</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

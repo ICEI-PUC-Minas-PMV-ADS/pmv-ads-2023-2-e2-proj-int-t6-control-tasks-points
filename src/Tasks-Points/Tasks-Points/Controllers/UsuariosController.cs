@@ -37,7 +37,7 @@ namespace Tasks_Points.Controllers
 
             if (dataUser == null)
             {
-                ViewBag.Message = "Usuário e/ou senha inválidos";
+                ViewBag.Message = "Usuário e/ou senha inválidos!";
                 return View();
             }
 
@@ -66,7 +66,7 @@ namespace Tasks_Points.Controllers
             } 
             else
             {
-                ViewBag.Message = "Usuário e/ou senha inválidos";
+                ViewBag.Message = "Usuário e/ou senha inválidos!";
                 return View();
             }
         }
