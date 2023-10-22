@@ -8,7 +8,7 @@ Nesta seção, você encontrará uma descrição detalhada das telas desenvolvid
 
 A tela principal do sistema exibe as tarefas cadastradas e atribuídas aos funcionários. Os dados dessas tarefas são armazenados usando estruturas de dados baseadas em SQL. A Figura 1 apresenta um exemplo desta tela.
 
-![Cadastro de tarefa](img/imagem1.jpg)
+<img src="img/imagem1.jpg" alt="Cadastro de tarefa" title="Cadastro de tarefa" height="400"/>
 <center>Figura 1 - Tela para cadastro de tarefa. </center>
 <br><br>
 
