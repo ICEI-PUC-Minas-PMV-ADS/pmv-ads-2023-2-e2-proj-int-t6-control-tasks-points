@@ -77,7 +77,7 @@ Evidências: 03-Metodologia / 04-Projeto de Interface / 05-Arquitetura da Soluç
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/ee085484-c9d0-4d64-90cf-9b6f8f9bcfc8)
 
-Evidências: 10-Apresentação do Projeto / P
+Evidências: 10-Apresentação do Projeto(prova de conceito) / Pasta src -> Tasks Points -> Tasks Points(código fonte da solução).
 
 
 
