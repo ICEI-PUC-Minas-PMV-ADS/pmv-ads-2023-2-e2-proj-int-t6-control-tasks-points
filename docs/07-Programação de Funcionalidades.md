@@ -8,9 +8,10 @@ apresentadas na sequência.
 
 <h4>Cadastro de Tarefa e Gerenciar Valores de Moedas Virtuais as Tarefas(RF-03 e RF-05)</h4>
 <br>
-A tela principal do sistema apresenta apresenta as tarefas cadastradas e desiguinadas ao(s) funcionários, os dados destas tarefas são armazenadas com estruturas dados baseada em SQL.
+A tela principal do sistema apresenta apresenta as tarefas cadastradas e desiguinadas ao(s) funcionários, os dados destas tarefas são armazenadas com estruturas dados baseada em SQL.exemplo da tela é apresentada na Figura 1. 
 
-exemplo da tela é apresentada na Figura X. 
+![Cadastro de tarefa](img/imagem1.jpg)
+<center>Figura 1 - Tela para cadastro de tarefa. </center>
 
 Requisitos atendidos:
 <br>
@@ -23,15 +24,21 @@ Artefatos da funcionalidade:<br>
 ● style.css <br>
 ● icone_noticia.jpg
 
-Instruções de acesso
-1. Abra um navegador de Internet e informe a seguinte URL: https://repl.it/Sf3l@#3ks
-2. A tela de tarefas é a primeira funcionalidade exibida pelo aplicativo.
+Instruções de acesso<br>
+4. Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;<br>
+5. Descompacte o arquivo em uma pasta específica;<br>
+6. Abra o Visual Studio Code e execute o Live Server; <br>
+7. Abra um navegador de Internet e informe a seguinte URL:
+http://localhost:7008/Tarefas
+8. A tela de tarefas é a primeira funcionalidade exibida pelo aplicativo.
    
 <h4>Gestor válida status de tarefa (RF-07)</h4>
 
 Na tela inicial permite ao gestor editar o status da tarefa visivel.
 
 exemplo da tela é apresentada na Figura X. 
+![Editar status de tarefa](img/imagem2.jpg)
+<center>Figura 2 - Tela visualizar, alterar ou excluir tarefa. </center>
 
 Artefatos da funcionalidade
 ● pesquisa.html <br>
