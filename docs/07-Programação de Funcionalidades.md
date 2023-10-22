@@ -1,6 +1,6 @@
 # Programação de Funcionalidades
 
-<h2>7. Visão Geral das Funcionalidades do Sistema (Telas)</h2>
+<h2>Visão Geral das Funcionalidades do Sistema (Telas)</h2>
 
 Nesta seção, você encontrará uma descrição detalhada das telas desenvolvidas para cada funcionalidade do sistema, juntamente com o respectivo endereço (URL) e instruções de acesso.
 
