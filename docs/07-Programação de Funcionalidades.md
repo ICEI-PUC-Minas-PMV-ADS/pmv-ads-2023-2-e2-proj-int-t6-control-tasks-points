@@ -30,8 +30,30 @@ Artefatos da funcionalidade:<br>
 ● Tarefas/Index.csthml <br>
 ● Tarefas/Create.cshtml <br>
 ● Tarefas/Edit.cshtml <br>
+● Tarefas/Details.cshtml <br>
 ● Tarefas/Delete.cshtml <br>
-<br>
+
+<h3>Login/cadastro na plataforma (RF-01)</h3>
+
+Logo de início ao entrar no site o usuário é direcionado a página de login, caso o funcionário/colaborador já tenha sido cadastrado basta informar o e-mail e a senha. Contudo, caso ainda não tenha cadastro seu gestor irá criar um novo usuário, apenas usuários com perfil admin podem criar outros usuários e visualizar a aba usuários da palataforma.
+
+<img src="img/imagem3.jpg" alt="Login" title="Login" height="400"/>
+<center>Figura 3 - Login na plataforma. </center>
+<br><br>
+
+<img src="img/imagem4.jpg" alt="Controle de usuários" title="Controle de usuários" height="400"/>
+<center>Figura 4 - Tela para controle de usuários. </center>
+<br><br>
+
+Artefatos da funcionalidade:<br>
+● Usuarios/Index.csthml <br>
+● Usuarios/Login.cshtml <br>
+● Usuarios/AccessDenied.cshtml <br>
+● Usuarios/Create.cshtml <br>
+● Usuarios/Edit.cshtml <br>
+● Usuarios/Delete.cshtml <br>
+● Usuarios/Details.cshtml <br>
+
 Instruções de acesso:<br>
 1. Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;<br>
 2. Descompacte o arquivo em uma pasta específica;<br>
