@@ -18,10 +18,7 @@ Requisitos atendidos:
 ● RF-05 - Gerenciar valores de moedas virtuais as tarefas.
 
 Artefatos da funcionalidade:<br>
-● index.html <br>
-● script_noticias.js <br>
-● style.css <br>
-● icone_noticia.jpg
+● Tarefas/Create.cshtml
   
 <h3>Validação do Status da Tarefa pelo Gestor (RF-07)</h3>
 
@@ -30,10 +27,10 @@ A tela inicial permite ao gestor editar o status da tarefa visível.A Figura 2 a
 <center>Figura 2 - Tela para visualizar, alterar ou excluir tarefa. </center>
 <br><br>
 Artefatos da funcionalidade:<br>
-● pesquisa.html <br>
-● script_pesquisa.js <br>
-● style.css <br>
-● icone_lupa.jpg <br>
+● Tarefas/Index.csthml <br>
+● Tarefas/Create.cshtml <br>
+● Tarefas/Edit.cshtml <br>
+● Tarefas/Delete.cshtml <br>
 <br>
 Instruções de acesso:<br>
 1. Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;<br>
