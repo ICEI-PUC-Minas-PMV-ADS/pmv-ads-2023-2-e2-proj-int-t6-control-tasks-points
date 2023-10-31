@@ -4,7 +4,7 @@
 
 Nesta seção, você encontrará uma descrição detalhada das telas desenvolvidas para cada funcionalidade do sistema, juntamente com o respectivo endereço (URL) e instruções de acesso.
 
-<h3>Gerenciamento de Tarefas e Valores de Moedas Virtuais (RF-03 e RF-05)</h3>
+<h3>Gerenciamento de Tarefas e Valores de Moedas Virtuais (RF-03, RF-04 e RF-05)</h3>
 
 A tela principal do sistema exibe as tarefas cadastradas e atribuídas aos funcionários. Os dados dessas tarefas são armazenados usando estruturas de dados baseadas em SQL. A Figura 1 apresenta um exemplo desta tela.
 
