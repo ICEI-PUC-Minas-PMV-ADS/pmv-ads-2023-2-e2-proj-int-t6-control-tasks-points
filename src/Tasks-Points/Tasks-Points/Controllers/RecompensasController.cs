@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -11,89 +12,90 @@ using Tasks_Points.Models;
 namespace Tasks_Points.Controllers
 {
     [Authorize]
-    public class TarefasController : Controller
+    public class RecompensasController : Controller
     {
         private readonly AppDbContext _context;
 
-        public TarefasController(AppDbContext context)
+        public RecompensasController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: Tarefas
+        // GET: Recompensas
         public async Task<IActionResult> Index()
         {
-              return _context.Tarefas != null ? 
-                          View(await _context.Tarefas.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Tarefas'  is null.");
+              return View(await _context.Recompensas.ToListAsync());
         }
 
-        // GET: Tarefas/Details/5
+        // GET: Recompensas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Tarefas == null)
+            if (id == null || _context.Recompensas == null)
             {
                 return NotFound();
             }
 
-            var tarefa = await _context.Tarefas
+            var recompensa = await _context.Recompensas
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (tarefa == null)
+            if (recompensa == null)
             {
                 return NotFound();
             }
 
-            return View(tarefa);
+            return View(recompensa);
         }
 
         [Authorize(Roles = "Admin")]
-        // GET: Tarefas/Create
+        // GET: Recompensas/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Tarefas/Create
+        // POST: Recompensas/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Create([Bind("Id,Name,Descricao,Valor")] Recompensa recompensa)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(recompensa);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(recompensa);
+        }
+
+        [Authorize(Roles = "Admin")]
+        // GET: Recompensas/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null || _context.Recompensas == null)
+            {
+                return NotFound();
+            }
+
+            var recompensa = await _context.Recompensas.FindAsync(id);
+            if (recompensa == null)
+            {
+                return NotFound();
+            }
+            return View(recompensa);
+        }
+
+        // POST: Recompensas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Prioridade,Responsavel,PrazoLimite,Coins,Status")] Tarefa tarefa)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Descricao,Valor")] Recompensa recompensa)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(tarefa);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(tarefa);
-        }
-
-        // GET: Tarefas/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Tarefas == null)
-            {
-                return NotFound();
-            }
-
-            var tarefa = await _context.Tarefas.FindAsync(id);
-            if (tarefa == null)
-            {
-                return NotFound();
-            }
-            return View(tarefa);
-        }
-
-        // POST: Tarefas/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Prioridade,Responsavel,PrazoLimite,Coins,Status")] Tarefa tarefa)
-        {
-            if (id != tarefa.Id)
+            if (id != recompensa.Id)
             {
                 return NotFound();
             }
@@ -102,12 +104,12 @@ namespace Tasks_Points.Controllers
             {
                 try
                 {
-                    _context.Update(tarefa);
+                    _context.Update(recompensa);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TarefaExists(tarefa.Id))
+                    if (!RecompensaExists(recompensa.Id))
                     {
                         return NotFound();
                     }
@@ -118,51 +120,51 @@ namespace Tasks_Points.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(tarefa);
+            return View(recompensa);
         }
 
         [Authorize(Roles = "Admin")]
-        // GET: Tarefas/Delete/5
+        // GET: Recompensas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Tarefas == null)
+            if (id == null || _context.Recompensas == null)
             {
                 return NotFound();
             }
 
-            var tarefa = await _context.Tarefas
+            var recompensa = await _context.Recompensas
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (tarefa == null)
+            if (recompensa == null)
             {
                 return NotFound();
             }
 
-            return View(tarefa);
+            return View(recompensa);
         }
 
-        // POST: Tarefas/Delete/5
+        // POST: Recompensas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Tarefas == null)
+            if (_context.Recompensas == null)
             {
-                return Problem("Entity set 'AppDbContext.Tarefas'  is null.");
+                return Problem("Entity set 'AppDbContext.Recompensas'  is null.");
             }
-            var tarefa = await _context.Tarefas.FindAsync(id);
-            if (tarefa != null)
+            var recompensa = await _context.Recompensas.FindAsync(id);
+            if (recompensa != null)
             {
-                _context.Tarefas.Remove(tarefa);
+                _context.Recompensas.Remove(recompensa);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TarefaExists(int id)
+        private bool RecompensaExists(int id)
         {
-          return (_context.Tarefas?.Any(e => e.Id == id)).GetValueOrDefault();
+          return _context.Recompensas.Any(e => e.Id == id);
         }
     }
 }
