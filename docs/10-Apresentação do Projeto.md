@@ -8,10 +8,15 @@
 
 ## Título do Projeto
 
-Nome e marca do projeto
+Tasks Points
+
+## Prova de Conceito
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/4fce1882-89cd-4e72-9aab-43a4796bd7dc
 
 ## Identidade Visual (Marca, Design)
 
+(Em construção)
 O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do contexto da solução proposta, de forma a manter a temática do problema.
 
 > **Links Úteis**:
