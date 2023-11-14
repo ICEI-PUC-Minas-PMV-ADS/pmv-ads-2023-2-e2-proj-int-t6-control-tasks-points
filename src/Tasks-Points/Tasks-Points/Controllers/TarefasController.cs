@@ -23,9 +23,12 @@ namespace Tasks_Points.Controllers
         // GET: Tarefas
         public async Task<IActionResult> Index()
         {
-              return _context.Tarefas != null ? 
-                          View(await _context.Tarefas.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Tarefas'  is null.");
+            
+            var listaTarefas = View(await _context.Tarefas.Where(u => u.Responsavel == "Samara").ToListAsync());
+
+            return _context.Tarefas != null ? 
+                View(await _context.Tarefas.ToListAsync()) :
+                Problem("Entity set 'AppDbContext.Tarefas'  is null.");
         }
 
         // GET: Tarefas/Details/5
