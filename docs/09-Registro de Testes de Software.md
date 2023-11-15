@@ -149,7 +149,64 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/e338965e-2c2b-4442-9607-d74d2391ccab)
 *Figura 2 - O cadastro do usuário foi excluído e não aparece mais na view de usuários(como era esperado)*.
 
+### Lista de Tarefas
 
+#### 3.1 Caso de Teste: Criar uma nova tarefa
+
+*Obs.: Essa ação de criar uma nova tarefa só pode ser executada por um usuário com permissão de "admin".*
+
+1. Acesse a view de Tarefas.
+2. Clique no botão "Criar nova".
+3. Preencha todos os campos.
+4. Aperte no botão "Adicionar".
+
+**Esperado:** O cadastro deve ser realizado com êxito e nova tarefa deve ser exibida na view.
+
+**Resultado do teste:** Sucesso. A tarefa foi criada sem nenhuma intercorrência.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/8d3dc8cb-9e8f-405b-90a5-d0aab93d40ad)
+*Figura 1 - Todos os campos são preenchidos e após clicar no botão adicionar a nova tarefa é criada.*
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/5c7e4cec-cf38-45f8-a74e-65511f677618)
+*Figura 2 - A tarefa récem-criada é exibida na view.*
+
+
+#### 3.2 Caso de Teste: Tentativa de adicionar uma tarefa sem preencher um ou mais campos
+1. Acesse a view de Tarefas.
+2. Clique no botão "Criar nova".
+3. Deixe de preencher um ou mais campos.
+4. Aperte no botão "Adicionar".
+
+**Esperado:** Mensagem informando a necessidade de preencher os campos vazios.
+
+**Resultado do teste:** Sucesso. Uma mensagem de alerta é exibida.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/1efdfccb-76cc-4a0d-a6dc-1c686e01a283)
+*Figura 1 - Mensagens de alerta são mostradas.*
+
+#### 3.3 Caso de Teste: Tentativa de criar/excluir uma tarefa com usuário sem permissão de administrador
+
+1. Faça login com um usuário comum (sem permissão de adminstrador).
+2. Após a view tarefas ser carregada clique em "Criar nova" e/ou selecione uma tarefa e tente exluí-la.
+
+**Esperado:** Usuário seja redirecionado para página de "Acesso Negado".
+
+**Resultado do teste:** Sucesso. Usuário é informado que não possui acesso para realizar estas operações.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/dc658ecc-6836-440f-85d8-49ad1e530a90)
+*Figura 1 - Tela de "Acesso Negado".*
+
+#### 3.3 Caso de Teste: Tentativa de alterar outros dados além do status da tarefa por usuário comum
+
+1. Faça login com um usuário comum (sem permissão de "admin").
+2. Selecione um usuário comum e clique no botão "Editar".
+3. Tente alterar os dados contidos em outros campos(além do status).
+
+**Esperado:** O usuário deve conseguir alterar apenas o status da tarefa e não modificar, por exemplo, o responsável por aquela tarefa nem a quantidade de coins ganha por ela. Todos os campos, exceto o de status, devem estar desabilitados.
+
+**Resultado do teste:** Sucesso. O usuário consegue alterar apenas o status da tarefa, demais campos estão desabilitados.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/41db099a-5dc6-45a6-b75e-066f23fd498e)
+*Figura 1 - Apenas o campo status é editável.*
 
 
 
