@@ -2,7 +2,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
+A fim de testar as funcionalidades implementadas no sistema, elaboramos vários casos de teste para verificar o funcionamento do software. Realizamos testes para verificar o login, controle de usuários e os CRUDs de Tarefas e Recompensas. A descrição mais detalhada dos testes e seus resultados segue logo abaixo:
 
 ## Testes de Software
 
@@ -149,7 +149,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/e338965e-2c2b-4442-9607-d74d2391ccab)
 *Figura 2 - O cadastro do usuário foi excluído e não aparece mais na view de usuários(como era esperado)*.
 
-### Lista de Tarefas
+### CRUD de Tarefas
 
 #### 3.1 Caso de Teste: Criar uma nova tarefa
 
@@ -198,7 +198,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 #### 3.3 Caso de Teste: Tentativa de alterar outros dados além do status da tarefa por usuário comum
 
 1. Faça login com um usuário comum (sem permissão de "admin").
-2. Selecione um usuário comum e clique no botão "Editar".
+2. Selecione uma tarefa e clique no botão "Editar".
 3. Tente alterar os dados contidos em outros campos(além do status).
 
 **Esperado:** O usuário deve conseguir alterar apenas o status da tarefa e não modificar, por exemplo, o responsável por aquela tarefa nem a quantidade de coins ganha por ela. Todos os campos, exceto o de status, devem estar desabilitados.
@@ -207,6 +207,112 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/41db099a-5dc6-45a6-b75e-066f23fd498e)
 *Figura 1 - Apenas o campo status é editável.*
+
+#### 3.4 Caso de Teste: Editar dados de uma tarefa(admin)
+
+1. Acesse a view de Tarefas.
+2. Selecione uma tarefa e aperte no botão "Editar".
+3. Altere os dados que deseja e clique no botão "Salvar".
+
+**Esperado:** O usuário (que tenha permissão de admin) deve ser capaz de alterar os dados de uma tarefa conforme sua necessidade. Para esse teste editamos a prioridade de uma tarefa de baixa para alta e mudamos o prazo limite de conclusão para o dia 20/11/2023 às 16:30.
+
+**Resultado do teste:** Sucesso. A alteração foi gravada com êxito.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/e452a6de-8417-4aeb-aa7f-2fbe6237f83d)
+*Figura 1 - Antes da alterações.*
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/7de4e8ff-339d-4c33-8ef8-f996bfd78976)
+*Figura 2 - Depois das alterações.*
+
+#### 3.4 Caso de Teste: Excluir uma tarefa(admin)
+
+1. Acesse a view de Tarefas.
+2. Selecione uma tarefa e clique no botão "Deletar".
+4. Confirme que deseja realmente excluir esta tarefa apertando(novamente) no botão "Deletar".
+
+**Esperado:** O usuário deve ser capaz de deletar uma tarefa. No teste em questão exclui a tarefa criada alteriormente no caso de teste 3.1 e editada no caso de teste 3.4.
+
+**Resultado do teste:** Sucesso. A tarefa foi deletada.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/dd7e3dbf-2077-48dc-8a2e-18eac6bd2998)
+*Figura 1 - Antes da exclusão.*
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/47f8703a-5f86-4721-9b8d-cc92dd9a3776)
+*Figura 2 - Depois da exclusão.*
+
+### CRUD de Recompensas
+
+#### 4.1 Caso de Teste: Adicionar uma recompensa
+
+*Obs.: ação permitida apenas para adminstradores.*
+
+1. Acesse a view/aba de recompensas (barra de navegação no canto superior esquerdo).
+2. Clique no botão "Criar nova".
+3. Preencha todos os campos.
+4. Aperte sobre o botão "Adicionar".
+
+**Esperado:** Recompensa deve ser criada sem que haja eventuais intercorrências.
+
+**Resultado do teste:** Sucesso. A recompensa foi cadastrada sem nenhum problema.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/0da1dd42-341c-4f0c-9be1-ca6014d22a54)
+*Figura 1 - Preenchimento dos dados da nova recompensa.*
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/ee9dec0e-b600-4c55-aca5-8900a9927dd9)
+*Figura 2 - Visualização da recompensa récem-adicionada.*
+
+#### 4.2 Caso de Teste: Tentativa de adicionar uma recompensa sem preencher todos os campos
+
+1. Acesse a view/aba de recompensas (barra de navegação no canto superior esquerdo).
+2. Clique no botão "Criar nova".
+3. Deixe de preencher um ou mais campos.
+4. Aperte sobre o botão "Adicionar".
+
+**Esperado:** Alerta informando ao usuário a obrigatoriedade de preencher os campos vazios.
+
+**Resultado do teste:** Sucesso. É exibida uma mensagem solicitando o preenchimento do campo.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/a5e91d90-9e21-4f34-8fe1-bb67d6df1322)
+*Figura 1 - Mensagem de alerta para o usuário.*
+
+#### 4.3 Caso de Teste: Tentativa de criar/editar/deletar recompensa por usuário comum
+
+1. Faça login com um usuário comum (sem permissão de "admin").
+2. Selecione uma tarefa e tente clicar sobre os botões "Criar Nova", "Editar" e/ou "Deletar".
+
+**Esperado:** Usuário seja redirecionado para a tela de "Acesso Negado", pois ele deve ser capaz de apenas visualizar as recompensas disponíveis sem ter permissão para alterá-las, criar novas ou excluí-las.
+
+**Resultado do teste:** Sucesso. Usuário foi devidamente redirecionado para a página ao tentar criar, editar ou deletar uma recompensa.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/6f4fcd79-e611-49b3-847f-f1b8cd695205)
+*Figura 1 - Tela de Acesso Negado.*
+
+#### 4.4 Caso de Teste: Tentativa de editar recompensa(usuário administrador)
+
+1. Acesse a view de Recompensas.
+2. Selecione uma recompensa da listagem e clique no botão "Editar".
+3. Faça a alteração que deseja e clique no botão "Salvar".
+
+**Esperado:** Deve estar disponível para o administrador fazer eventuias alterações nas recompensas cadastradas.
+
+**Resultado do teste:** Sucesso. A alteração foi efetuada.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/ee9dec0e-b600-4c55-aca5-8900a9927dd9)
+*Figura 1 - Antes da alteração.*
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/135416c8-b4be-4f6a-a3ac-83a0c36639d9)
+*Figura 2 - Depois da alteração.*
+
+#### 4.5 Caso de Teste: Deletar uma recompensa
+
+1. Acesse a view de Recompensas.
+2. Selecione uma recompensa e clique no botão "Deletar".
+4. Confirme que deseja realmente excluir esta recompensa apertando(novamente) no botão "Deletar".
+
+**Esperado:** Usuário consiga excluir uma recompensa previamente adicionada. No teste em questão exclui a recompensa criada alteriormente no caso de teste 4.1 e editada no caso de teste 4.4.
+
+**Resultado do teste:** Sucesso. A recompensa foi excluída com êxito.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/6af5fafb-2825-4f52-8f12-bf9efafe3162)
+*Figura 1 - Antes da exclusão.*
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/a0bfb229-947e-4a67-bd8f-fad931e24416)
+*Figura 2 - Depois da exclusão.*
 
 
 
