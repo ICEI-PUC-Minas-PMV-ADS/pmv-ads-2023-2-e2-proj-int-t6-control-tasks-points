@@ -70,6 +70,21 @@ Artefatos da funcionalidade:<br>
 
 A tela de Recompensas da aplicação permite que os funcionários consulte as recompensas disponíveis (previamente cadastradas pelo gestor). O funcionário pode visualizá-las, porém não pode editar, excluir ou criar uma nova. A figura 5 apresenta a página onde são visualizadas as recompensas.
 
+<img src="img/imagem5.jpg" alt="Tela de Recompensas" title="Tela de Recompensas" height="400"/>
+<center>Figura 5 - Página de Recompensas. </center>
+<br><br>
+
+Requisitos atendidos:
+<br>
+● RF-09 - Funcionário consulta recompensas disponíveis.
+
+Artefatos da funcionalidade:<br>
+● Recompensas/Index.csthml <br>
+● Recompensas/Create.cshtml <br>
+● Recompensas/Edit.cshtml <br>
+● Recompensas/Delete.cshtml <br>
+● Recompensas/Details.cshtml <br>
+
 Instruções de acesso:<br>
 1. Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;<br>
 2. Descompacte o arquivo em uma pasta específica;<br>
