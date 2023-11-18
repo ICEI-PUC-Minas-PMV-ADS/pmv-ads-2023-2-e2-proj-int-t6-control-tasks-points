@@ -79,7 +79,10 @@ Evidências: 03-Metodologia / 04-Projeto de Interface / 05-Arquitetura da Soluç
 
 Evidências: 10-Apresentação do Projeto(prova de conceito) / Pasta src -> Tasks Points -> Tasks Points(código fonte da solução).
 
+### Sprint 4
 
+**Planejamento:** O planejamento da Sprint 4 aborda desenvolver as demais funcionalidades do sistema, registrar testes de software/usabilidade e detalhar a programação das funcionalidades.
 
+**Execução:** Em andamento.
 
 
