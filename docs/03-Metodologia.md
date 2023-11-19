@@ -13,6 +13,7 @@ A metodologia adotada pela equipe para abordar o problema se baseia em uma abord
 | Documentos do projeto | GitHub | [ Documentos no GitHub ](https://github.com/ICEI-PUC-Minas-PMV-ADS/Control-Tasks-Points/tree/main/docs) |
 | Projeto de Interface e Wireframes | Figma |  [Figma](https://www.figma.com/) |
 | Gerenciamento do Projeto | GitHub | [ Repositório no GitHub - Equipe de Desenvolvimento ](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/teams/developers/repositories) |
+| Questionário de Usabilidade | Survio | [ LINK - Questionário de Usabilidade Online ](https://www.survio.com/survey/d/O1P3P4M7M9F2O8D6U) |
 
 ## Gerenciamento de Projeto
 
