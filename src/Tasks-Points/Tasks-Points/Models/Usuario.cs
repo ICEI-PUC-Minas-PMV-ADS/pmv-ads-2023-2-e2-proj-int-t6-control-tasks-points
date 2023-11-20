@@ -27,6 +27,9 @@ namespace Tasks_Points.Models
         [Display(Name = "Permissão")]
         public Permission Permission { get; set; }
 
+        [Display(Name = "Saldo")]
+        public int Coins { get; set; }
+
     }
 
     public enum Permission

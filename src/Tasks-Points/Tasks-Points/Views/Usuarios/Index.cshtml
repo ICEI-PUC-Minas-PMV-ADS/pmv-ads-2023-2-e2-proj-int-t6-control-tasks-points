@@ -21,7 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Permission)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Coins)
+            </th
         </tr>
     </thead>
     <tbody>
@@ -35,6 +37,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Permission)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Coins)
             </td>
             <td>
                 <a class="btn btn-outline-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |

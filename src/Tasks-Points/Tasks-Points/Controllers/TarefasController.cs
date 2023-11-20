@@ -23,11 +23,9 @@ namespace Tasks_Points.Controllers
         // GET: Tarefas
         public async Task<IActionResult> Index()
         {
-            
-            var listaTarefas = View(await _context.Tarefas.Where(u => u.Responsavel == "Samara").ToListAsync());
 
             return _context.Tarefas != null ? 
-                View(await _context.Tarefas.ToListAsync()) :
+                View(await _context.Tarefas.Where(u => u.Responsavel == User.Identity.Name).ToListAsync()) :
                 Problem("Entity set 'AppDbContext.Tarefas'  is null.");
         }
 
@@ -65,7 +63,7 @@ namespace Tasks_Points.Controllers
         public async Task<IActionResult> Create([Bind("Id,Nome,Prioridade,Responsavel,PrazoLimite,Coins,Status")] Tarefa tarefa)
         {
             if (ModelState.IsValid)
-            {
+            { 
                 _context.Add(tarefa);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -105,8 +103,29 @@ namespace Tasks_Points.Controllers
             {
                 try
                 {
-                    _context.Update(tarefa);
-                    await _context.SaveChangesAsync();
+
+                    if (tarefa.Status == StatusTarefa.Concluída)
+                    {
+                        var user = await _context.Usuarios.FirstAsync(e => e.Name == tarefa.Responsavel);
+                        user.Coins = user.Coins + tarefa.Coins;
+                        _context.Usuarios.Update(user);
+
+                        var tarefaFilter = await _context.Tarefas.FindAsync(id);
+
+                        if (tarefaFilter != null)
+                        {
+                            _context.Tarefas.Remove(tarefaFilter);
+                        }
+
+                        await _context.SaveChangesAsync();
+                        return RedirectToAction(nameof(Index));
+
+                    }
+                    else
+                    {
+                        _context.Update(tarefa);
+                        await _context.SaveChangesAsync();
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {

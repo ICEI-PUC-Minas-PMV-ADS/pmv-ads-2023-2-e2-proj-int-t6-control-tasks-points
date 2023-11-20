@@ -12,7 +12,6 @@ using Tasks_Points.Models;
 
 namespace Tasks_Points.Controllers
 {
-    [Authorize(Roles = "Admin")]
     public class UsuariosController : Controller
     {
         private readonly AppDbContext _context;

@@ -166,5 +166,49 @@ namespace Tasks_Points.Controllers
         {
           return _context.Recompensas.Any(e => e.Id == id);
         }
+
+        // GET: Recompensas/Resgatar/5
+        public async Task<IActionResult> Resgatar(int? id)
+        {
+            if (id == null || _context.Recompensas == null)
+            {
+                return NotFound();
+            }
+
+            var recompensa = await _context.Recompensas
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (recompensa == null)
+            {
+                return NotFound();
+            }
+
+            return View(recompensa);
+        }
+
+        // POST: Recompensas/Resgatar/5
+        [HttpPost, ActionName("Resgatar")]
+        public async Task<IActionResult> Resgatar(int id)
+        {
+            if (_context.Recompensas == null)
+            {
+                return Problem("Entity set 'AppDbContext.Recompensas'  is null.");
+            }
+
+            var recompensa = await _context.Recompensas.FindAsync(id);
+            
+            if (recompensa != null)
+            {
+
+                var user = await _context.Usuarios.FirstAsync(e => e.Name == User.Identity.Name);
+                user.Coins = user.Coins - recompensa.Valor;
+                _context.Usuarios.Update(user);
+
+
+                _context.Recompensas.Remove(recompensa);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
