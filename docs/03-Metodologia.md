@@ -86,6 +86,8 @@ Evidências: 10-Apresentação do Projeto(prova de conceito) / Pasta src -> Task
 
 **Execução:** Para a conclusão desta sprint foram desenvolvidas as demais funcionalidades do sistema. Entre as funcionalidades desenvolvidas nesta sprint estão o CRUD de recompensas e a adição de mecanismos de busca, ordenação e paginação nas páginas da nossa aplicação. Elaboramos vários casos de teste a fim de verificar o funcionamento do sistema e registramos os resultados obtidos. Além disso, foi criado um questionário de usabilidade online onde iremos realizar uma pesquisa e avaliar a satisfação geral dos usuários (link do questionário logo acima na relação de ambientes de trabalho). Detalhamos a programação de funcionalides e o template padrão do site.
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/b0cb45cc-b531-43a4-9bbd-7f861a51ca91)
+
 Evidências: 06 - Template Padrão do Site / 07 - Programação de Funcionalides / 09 - Registro de Testes de Software / Pasta src -> Tasks Points -> Tasks Points(código fonte da solução).
 
 
