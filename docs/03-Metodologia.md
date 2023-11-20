@@ -84,6 +84,9 @@ Evidências: 10-Apresentação do Projeto(prova de conceito) / Pasta src -> Task
 
 **Planejamento:** O planejamento da Sprint 4 aborda desenvolver as demais funcionalidades do sistema, registrar testes de software/usabilidade e detalhar a programação das funcionalidades.
 
-**Execução:** Em andamento.
+**Execução:** Para a conclusão desta sprint foram desenvolvidas as demais funcionalidades do sistema. Entre as funcionalidades desenvolvidas nesta sprint estão o CRUD de recompensas e a adição de mecanismos de busca, ordenação e paginação nas páginas da nossa aplicação. Elaboramos vários casos de teste a fim de verificar o funcionamento do sistema e registramos os resultados obtidos. Além disso, foi criado um questionário de usabilidade online onde iremos realizar uma pesquisa e avaliar a satisfação geral dos usuários (link do questionário logo acima na relação de ambientes de trabalho). Detalhamos a programação de funcionalides e o template padrão do site.
+
+Evidências: 06 - Template Padrão do Site / 07 - Programação de Funcionalides / 09 - Registro de Testes de Software / Pasta src -> Tasks Points -> Tasks Points(código fonte da solução).
+
 
 
