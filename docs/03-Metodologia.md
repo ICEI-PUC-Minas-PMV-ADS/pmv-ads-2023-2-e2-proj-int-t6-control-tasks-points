@@ -13,6 +13,7 @@ A metodologia adotada pela equipe para abordar o problema se baseia em uma abord
 | Documentos do projeto | GitHub | [ Documentos no GitHub ](https://github.com/ICEI-PUC-Minas-PMV-ADS/Control-Tasks-Points/tree/main/docs) |
 | Projeto de Interface e Wireframes | Figma |  [Figma](https://www.figma.com/) |
 | Gerenciamento do Projeto | GitHub | [ Repositório no GitHub - Equipe de Desenvolvimento ](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/teams/developers/repositories) |
+| Questionário de Usabilidade | Survio | [ LINK - Questionário de Usabilidade Online ](https://www.survio.com/survey/d/O1P3P4M7M9F2O8D6U) |
 
 ## Gerenciamento de Projeto
 
@@ -83,6 +84,11 @@ Evidências: 10-Apresentação do Projeto(prova de conceito) / Pasta src -> Task
 
 **Planejamento:** O planejamento da Sprint 4 aborda desenvolver as demais funcionalidades do sistema, registrar testes de software/usabilidade e detalhar a programação das funcionalidades.
 
-**Execução:** Em andamento.
+**Execução:** Para a conclusão desta sprint foram desenvolvidas as demais funcionalidades do sistema. Entre as funcionalidades desenvolvidas nesta sprint estão o CRUD de recompensas e a adição de mecanismos de busca, ordenação e paginação nas páginas da nossa aplicação. Elaboramos vários casos de teste a fim de verificar o funcionamento do sistema e registramos os resultados obtidos. Além disso, foi criado um questionário de usabilidade online onde iremos realizar uma pesquisa e avaliar a satisfação geral dos usuários (link do questionário logo acima na relação de ambientes de trabalho). Detalhamos a programação de funcionalides e o template padrão do site.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/b0cb45cc-b531-43a4-9bbd-7f861a51ca91)
+
+Evidências: 06 - Template Padrão do Site / 07 - Programação de Funcionalides / 09 - Registro de Testes de Software / Pasta src -> Tasks Points -> Tasks Points(código fonte da solução).
+
 
 

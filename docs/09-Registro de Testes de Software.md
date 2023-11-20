@@ -314,6 +314,9 @@ A fim de testar as funcionalidades implementadas no sistema, elaboramos vários 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/assets/122751654/a0bfb229-947e-4a67-bd8f-fad931e24416)
 *Figura 2 - Depois da exclusão.*
 
+## Testes de Usabilidade
 
+Um questionário de usabilidade online foi elaborado a fim de realizar uma pesquisa e avaliar a satisfação geral do usuários. O questionário contem 8 perguntas onde o usuário avalia seu nível de satisfação em uma escala de 1 a 5, onde 1 é "Totalmente Insatisfeito" e 5 "Totalmente Satisfieto". Para a criação deste questionario fizemos uso da plataforma Survio. O link do questionário segue logo abaixo e assim que forem coletadas mais respostas iremos compartilhar o resultado final.
 
+[ LINK - Questionário de Usabilidade Online ](https://www.survio.com/survey/d/O1P3P4M7M9F2O8D6U)
 
