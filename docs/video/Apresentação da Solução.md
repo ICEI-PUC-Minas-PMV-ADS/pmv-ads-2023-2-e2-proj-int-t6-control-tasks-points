@@ -8,4 +8,4 @@
 
 ## Apresentação da Solução
 
-[(docs/video/Taskpoints.mp4)](Video de Apresentação)https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/blob/main/docs/video/Taskpoints.mp4
+<a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/blob/main/docs/video/Taskpoints.mp4"> Clique aqui visualizar o video de apresentação da solução.</a>
