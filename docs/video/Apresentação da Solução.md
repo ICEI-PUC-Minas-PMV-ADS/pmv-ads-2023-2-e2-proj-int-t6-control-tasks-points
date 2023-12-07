@@ -7,5 +7,9 @@
 ## Tasks Points
 
 ## Apresentação da Solução
-
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-control-tasks-points/blob/main/docs/video/Taskpoints.mp4
+<div class="col-lg-8">
+    <video width="100%" height="40%" autoplay loop muted>
+        <source src="docs/video/Taskpoints.mp4" type="video/mp4" >
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+</div>
