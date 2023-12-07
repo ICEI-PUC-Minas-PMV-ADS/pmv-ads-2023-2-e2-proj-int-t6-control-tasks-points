@@ -109,7 +109,36 @@ namespace Tasks_Points.Controllers
             return View(usuario);
         }
 
+        // GET: Usuarios/Cadastrar
+        [AllowAnonymous]
+        public IActionResult Cadastrar()
+        {
+            return View();
+        }
+
+        // POST: Usuarios/Cadastrar
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Cadastrar([Bind("Id,Name,Email,Password")] Usuario usuario)
+        {
+            if (ModelState.IsValid)
+            {
+
+                usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
+
+                usuario.Permission = Permission.User;
+
+                _context.Add(usuario);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Login));
+            }
+            return View(usuario);
+        }
+
         // GET: Usuarios/Create
+        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
@@ -119,7 +148,7 @@ namespace Tasks_Points.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Create([Bind("Id,Name,Email,Password,Permission")] Usuario usuario)
         {
             if (ModelState.IsValid)

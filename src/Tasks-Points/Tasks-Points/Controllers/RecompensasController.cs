@@ -24,12 +24,20 @@ namespace Tasks_Points.Controllers
         // GET: Recompensas
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Recompensas.ToListAsync());
+
+            var user = await _context.Usuarios.FirstAsync(e => e.Name == User.Identity.Name);
+            ViewBag.Coins = user.Coins.ToString();
+
+            return View(await _context.Recompensas.ToListAsync());
         }
 
         // GET: Recompensas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+
+            var user = await _context.Usuarios.FirstAsync(e => e.Name == User.Identity.Name);
+            ViewBag.Coins = user.Coins.ToString();
+
             if (id == null || _context.Recompensas == null)
             {
                 return NotFound();
@@ -61,6 +69,10 @@ namespace Tasks_Points.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,Name,Descricao,Valor")] Recompensa recompensa)
         {
+
+            var user = await _context.Usuarios.FirstAsync(e => e.Name == User.Identity.Name);
+            ViewBag.Coins = user.Coins.ToString();
+
             if (ModelState.IsValid)
             {
                 _context.Add(recompensa);
@@ -74,6 +86,10 @@ namespace Tasks_Points.Controllers
         // GET: Recompensas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+
+            var user = await _context.Usuarios.FirstAsync(e => e.Name == User.Identity.Name);
+            ViewBag.Coins = user.Coins.ToString();
+
             if (id == null || _context.Recompensas == null)
             {
                 return NotFound();
@@ -95,6 +111,10 @@ namespace Tasks_Points.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Descricao,Valor")] Recompensa recompensa)
         {
+
+            var user = await _context.Usuarios.FirstAsync(e => e.Name == User.Identity.Name);
+            ViewBag.Coins = user.Coins.ToString();
+
             if (id != recompensa.Id)
             {
                 return NotFound();
@@ -127,6 +147,10 @@ namespace Tasks_Points.Controllers
         // GET: Recompensas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+
+            var user = await _context.Usuarios.FirstAsync(e => e.Name == User.Identity.Name);
+            ViewBag.Coins = user.Coins.ToString();
+
             if (id == null || _context.Recompensas == null)
             {
                 return NotFound();
@@ -148,6 +172,10 @@ namespace Tasks_Points.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+
+            var user = await _context.Usuarios.FirstAsync(e => e.Name == User.Identity.Name);
+            ViewBag.Coins = user.Coins.ToString();
+
             if (_context.Recompensas == null)
             {
                 return Problem("Entity set 'AppDbContext.Recompensas'  is null.");
@@ -170,6 +198,10 @@ namespace Tasks_Points.Controllers
         // GET: Recompensas/Resgatar/5
         public async Task<IActionResult> Resgatar(int? id)
         {
+
+            var user = await _context.Usuarios.FirstAsync(e => e.Name == User.Identity.Name);
+            ViewBag.Coins = user.Coins.ToString();
+
             if (id == null || _context.Recompensas == null)
             {
                 return NotFound();
@@ -189,6 +221,8 @@ namespace Tasks_Points.Controllers
         [HttpPost, ActionName("Resgatar")]
         public async Task<IActionResult> Resgatar(int id)
         {
+
+
             if (_context.Recompensas == null)
             {
                 return Problem("Entity set 'AppDbContext.Recompensas'  is null.");
@@ -203,7 +237,7 @@ namespace Tasks_Points.Controllers
                 user.Coins = user.Coins - recompensa.Valor;
                 _context.Usuarios.Update(user);
 
-
+                ViewBag.Coins = user.Coins.ToString();
                 _context.Recompensas.Remove(recompensa);
             }
 
